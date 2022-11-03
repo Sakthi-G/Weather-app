@@ -1,0 +1,158 @@
+.middle-section {
+  background-color: var(--primary-black);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 300px;
+  width: 100%;
+}
+
+.middle-top {
+  align-items: center;
+  color: var(--primary-white);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  left: 0px;
+  position: sticky;
+  text-align: center;
+  width: 100%;
+}
+
+.middle-heading {
+  align-content: center;
+  flex: 0.9;
+  font-size: 20px;
+  padding-left: 20%;
+}
+
+.images {
+  margin-top: 5px;
+}
+
+.selection-icons {
+  cursor: pointer;
+  height: 30px;
+  margin-right: 10px;
+  padding-bottom: 5px;
+  width: 30px;
+}
+
+.selected-icon {
+  border-bottom: 3px solid var(--bg-selection-blue);
+  padding-bottom: 5px;
+}
+
+.spinner-input {
+  background-color: var(--bg-input-box);
+  border-radius: 5px;
+  color: var(--primary-white);
+  height: 25px;
+  width: 35px;
+}
+
+.main-card-holder {
+  align-items: center;
+  display: flex;
+  height: 250px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#multiple-cards {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 85%;
+}
+
+.cards-container {
+  display: flex;
+  height: 250px;
+  justify-content: flex-start;
+  margin: 5px auto;
+  width: fit-content;
+}
+
+.arrow-img {
+  filter: invert(1);
+}
+
+#left-arrow,
+#right-arrow {
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  height: 35px;
+  width: 35px;
+}
+
+.cards {
+  background-color: var(--bg-dark-grey-tile);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 55% 85%;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px #696969;
+  color: var(--primary-white);
+  display: flex;
+  font-size: 18px;
+  height: 210px;
+  line-height: 2;
+  margin: 10px 20px;
+  transition: transform 0.2s;
+  width: 16rem;
+}
+
+.cards:hover {
+  transform: scale(1.1);
+  z-index: auto;
+}
+
+.cards-weather-data {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.card-data {
+  font-weight: 750;
+}
+
+.cards-weather-icons,
+.heading-icon {
+  align-items: center;
+  display: flex;
+}
+
+.icons {
+  height: 25px;
+  padding-right: 5px;
+  width: 25px;
+}
+
+.cards-bg-image {
+  flex: 50%;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.heading-icon {
+  float: right;
+  font-size: 25px;
+  font-weight: 750;
+  width: auto;
+}
+
+/* Responsive to the Cards */
+@media all and (min-width: 600px) and (max-width: 1170px) {
+  .middle-heading {
+    padding-left: 10%;
+  }
+
+  .cards {
+    width: 15rem;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,144 @@
+.bottom-section {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  height: fit-content;
+}
+
+.bottom {
+  align-items: center;
+  background-color: var(--primary-black);
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.bottom-heading {
+  flex: 1;
+  float: left;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.sorting-text {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+}
+
+.bottom-icon1,
+.bottom-icon2 {
+  cursor: pointer;
+  height: 25px;
+  margin-left: 10px;
+  margin-right: 15px;
+  width: 20px;
+}
+
+.bottom-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  width: 100%;
+}
+
+.container-contents {
+  background-color: var(--bg-grey-tile);
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 15px;
+  padding: 10px;
+}
+
+.container-contents:hover {
+  filter: drop-shadow(0 0 5px var(--primary-white));
+}
+
+.continent,
+.card-temperature,
+.city-time {
+  flex: 50%;
+  font-size: 18px;
+}
+
+.continent {
+  color: var(--bright-yellow-text);
+  padding-bottom: 5px;
+}
+
+.card-temperature {
+  font-weight: bold;
+  padding-bottom: 5px;
+  text-align: right;
+}
+
+.bottom-card-humidity-value {
+  display: flex;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.bottom-card-humidity-icon {
+  height: 15px;
+  width: 20px;
+}
+
+@media all and (max-width: 1050px) {
+  .bottom-heading {
+    font-size: 20px;
+  }
+
+  .sorting-text {
+    font-size: 18px;
+  }
+
+  .continent,
+  .card-temperature,
+  .city-time,
+  .bottom-card-humidity-value {
+    font-size: 15px;
+  }
+
+  .bottom-card-humidity-icon {
+    height: 14px;
+  }
+}
+
+@media all and (max-width: 880px) {
+  .container-contents {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media all and (max-width: 730px) {
+  .bottom-heading {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .sorting-text {
+    font-size: 15px;
+  }
+
+  .bottom-icon1,
+  .bottom-icon2 {
+    height: 15px;
+    width: 15px;
+    margin: 0px 5px;
+  }
+
+  .continent,
+  .card-temperature,
+  .city-time,
+  .bottom-card-humidity-value {
+    font-size: 13px;
+  }
+
+  .bottom-card-humidity-icon {
+    height: 13px;
+  }
+}

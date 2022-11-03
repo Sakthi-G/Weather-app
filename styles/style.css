@@ -1,0 +1,25 @@
+@import url(top-section.css);
+@import url(middle-section.css);
+@import url(bottom-section.css);
+@import url(vars.css);
+
+* {
+  box-sizing: border-box;
+  font-family: "Times New Roman";
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}

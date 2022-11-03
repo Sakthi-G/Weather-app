@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="desciption"
+      content="This website provides a detialed information about weather details for a selected city."
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Monitoring</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+  </head>
+  <body>
+    <section class="top-section" id="top-section">
+      <div class="heading">
+        <div>
+          <img
+            class="logo"
+            id="img-city"
+            src="./assets/seoul.svg"
+            width="70px"
+            height="70px"
+            alt="city-img"
+          />
+        </div>
+        <div class="header">
+          <input
+            list="cities"
+            autocomplete="off"
+            class="dropdown"
+            id="input-box"
+            value="Seoul"
+          />
+          <datalist id="cities"> </datalist>
+        </div>
+        <div class="date-time">
+          <p class="time" id="time">10:10:<small>44</small></p>
+          <img
+            class="am-logo"
+            id="am-pm-logo"
+            src="./assets/amState.svg"
+            width="50px"
+            height="40px"
+            alt="Am-logo"
+          />
+          <pre class="date" id="date">23-July-2022</pre>
+        </div>
+      </div>
+
+      <div class="flex-data">
+        <div>
+          <h2 class="data-head">Temp <span>&#8451;</span></h2>
+          <p class="data-content" id="temperature">25 <span>&#8451;</span></p>
+        </div>
+
+        <div class="lines"></div>
+
+        <div>
+          <h2 class="data-head">Humidity</h2>
+          <p class="data-content" id="humidity">25 %</p>
+        </div>
+
+        <div>
+          <h2 class="data-head">Temp <span>&#176;</span>F</h2>
+          <p class="data-content" id="fahrenheit">78 <span>&#176;</span>F</p>
+        </div>
+
+        <div class="lines"></div>
+
+        <div>
+          <h2 class="data-head">Precipitation</h2>
+          <p class="data-content" id="percipitation">0 %</p>
+        </div>
+      </div>
+
+      <div class="flex-weather">
+        <div class="weather-content">
+          <p id="current-status">NOW</p>
+          <div class="line"></div>
+          <img
+            id="current-icon"
+            src="./assets/cloudyIcon.svg"
+            width="30px"
+            height="30px"
+            alt="cloud-icon"
+          />
+          <p id="current-temperature">6</p>
+        </div>
+
+        <div class="weather-content">
+          <div class="line sp-line"></div>
+        </div>
+
+        <div class="weather-content">
+          <p id="hour-1">11 AM</p>
+          <div class="line"></div>
+          <img
+            id="weather-icon1"
+            src="./assets/rainyIconBlack.svg"
+            width="30px"
+            height="30px"
+            alt="rainy-icon"
+          />
+          <p id="hourly-temperature-1">7</p>
+        </div>
+
+        <div class="weather-content">
+          <div class="line sp-line"></div>
+        </div>
+
+        <div class="weather-content">
+          <p id="hour-2">12 PM</p>
+          <div class="line"></div>
+          <img
+            id="weather-icon2"
+            src="./assets/windyIcon.svg"
+            width="30px"
+            height="30px"
+            alt="windy-icon"
+          />
+          <p id="hourly-temperature-2">7</p>
+        </div>
+
+        <div class="weather-content">
+          <div class="line sp-line"></div>
+        </div>
+
+        <div class="weather-content">
+          <p id="hour-3">1 PM</p>
+          <div class="line"></div>
+          <img
+            id="weather-icon3"
+            src="./assets/rainyIcon.svg"
+            width="30px"
+            height="30px"
+            alt="rainy-icon"
+          />
+          <p id="hourly-temperature-3">8</p>
+        </div>
+
+        <div class="weather-content">
+          <div class="line sp-line"></div>
+        </div>
+
+        <div class="weather-content">
+          <p id="hour-4">2 PM</p>
+          <div class="line"></div>
+          <img
+            id="weather-icon4"
+            src="./assets/windyIcon.svg"
+            width="30px"
+            height="30px"
+            alt="windy-icon"
+          />
+          <p id="hourly-temperature-4">8</p>
+        </div>
+
+        <div class="weather-content">
+          <div class="line sp-line"></div>
+        </div>
+
+        <div class="weather-content">
+          <p id="hour-5">3 PM</p>
+          <div class="line"></div>
+          <img
+            id="weather-icon5"
+            src="./assets/rainyIcon.svg"
+            width="30px"
+            height="30px"
+            alt="windy-icon"
+          />
+          <p id="hourly-temperature-5">6</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="middle-section" id="middle-section">
+      <div class="middle-top">
+        <p class="middle-heading">Top cities around the world</p>
+        <div class="images">
+          <img
+            class="selection-icons"
+            id="sun-icon"
+            src="./assets/sunnyIcon.svg"
+            alt="sunny-icon"
+            title="Sort Cities based on Temperature"
+          />
+          <img
+            id="snow-icon"
+            class="selection-icons"
+            src="./assets/snowflakeIcon.svg"
+            alt="sonwflake-icon"
+            title="Sort Cities based on Precipitation"
+          />
+          <img
+            id="rain-icon"
+            class="selection-icons"
+            src="./assets/rainyIcon.svg"
+            alt="rainy-icon"
+            title="Sort Cities based on Humidity"
+          />
+        </div>
+        <div>
+          <label for="spinner"> Display Top: </label>
+        </div>
+        <div>
+          <input
+            id="spinner"
+            class="spinner-input"
+            type="number"
+            value="4"
+            min="3"
+            max="10"
+          />
+        </div>
+      </div>
+      <div class="main-card-holder">
+        <div id="left-arrow">
+          <img class="arrow-img" src="./assets/backwardArrow.svg" />
+        </div>
+        <div id="multiple-cards">
+          <div class="cards-container" id="card-holder"></div>
+        </div>
+        <div id="right-arrow">
+          <img class="arrow-img" src="./assets/forwardArrow.svg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-section">
+      <div class="bottom">
+        <p class="bottom-heading">Cities across continents at a Glance</p>
+        <div class="sorting-text">
+          <div>Continent Name</div>
+          <img
+            id="continent-sort-button"
+            class="bottom-icon1"
+            src="./assets/arrowUp.svg"
+            alt="continent-up-arrow"
+            title="Sort Cities in Descending"
+          />
+          <div>Temperature</div>
+          <img
+            id="temperature-sort-button"
+            class="bottom-icon2"
+            src="./assets/arrowDown.svg"
+            alt="temperature-down-arrow"
+            title="Sort Temperature's in Ascending"
+          />
+        </div>
+      </div>
+      <div class="bottom-container" id="bottom-card-container"></div>
+    </section>
+    <script src="./scripts/api-call.js"></script>
+  </body>
+</html>
